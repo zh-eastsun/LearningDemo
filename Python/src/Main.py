@@ -37,6 +37,7 @@ if __name__ == "__main__":
         print("not done...")
         # 缩进一致会导致错误
       # print("error...")
+    print("------------------------------\n\n")
     #----------------
     
     # 数字类型
@@ -95,6 +96,32 @@ if __name__ == "__main__":
     
     # 9. 对字符串进行编码
     str = "hello world"
-    print(str.encode("ascii"))  # ascii只能对英文进行编码
+    print("字符编码：ASCII", str.encode("ascii"))  # ascii只能对英文进行编码
     str = "中文"
-    print(str.encode("utf-8"))  # 编码中文需要支持中文的字符集
+    print("字符编码：UTF-8", str.encode("utf-8"))  # 编码中文需要支持中文的字符集
+    
+    # 10. 对字符串进行解码
+    str = b'hello world'
+    print("字符解码：ASCII", str.decode("ascii"))
+    str = b'\xe4\xb8\xad\xe6\x96\x87'
+    print("字符解码：UTF-8", str.decode("utf-8"))
+    
+    # 11. 计算字符串长度
+    str = "1234567"
+    print("字符串\"%s\"长度：%d" %(str, len(str)))
+    print("------------------------------\n\n")
+    # ------------------------------
+    
+    # 可变列表List
+    language = ["java", "kotlin", "python"]             # 定义
+    length = len(language)                              # 计算长度
+    print("列表元素：", language, "；长度：", length)
+    
+    # 1. 访问列表元素
+    print("从前往后第一个：", language[0])
+    print("从后往前第一个：", language[-1])
+    
+    # 2. 添加元素
+    language.append("javascript")
+    print("添加后的列表元素：", language)
+    
