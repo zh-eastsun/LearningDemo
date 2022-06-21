@@ -57,10 +57,10 @@ if __name__ == "__main__":
     
     # 字符串
     # 1. 单行字符串
-    str = "这是一个单行字符串"
+    string = "这是一个单行字符串"
     
     # 2. 多行字符串
-    str = """这
+    string = """这
     是
     一
     个
@@ -72,13 +72,13 @@ if __name__ == "__main__":
     """
     
     # 3. 字符串转义
-    str = "Hello, world!\n"
-    print(str)
+    string = "Hello, world!\n"
+    print(string)
     # 4. 不需要转义
-    str = r"Hello, world!\n"
+    string = r"Hello, world!\n"
     # 5. 表示'\'
-    str = "Hello, world!\\n"
-    print(str)
+    string = "Hello, world!\\n"
+    print(string)
     
     # 6. 字符串格式化
     print("""
@@ -95,20 +95,20 @@ if __name__ == "__main__":
     print(chr(ascii))
     
     # 9. 对字符串进行编码
-    str = "hello world"
-    print("字符编码：ASCII", str.encode("ascii"))  # ascii只能对英文进行编码
-    str = "中文"
-    print("字符编码：UTF-8", str.encode("utf-8"))  # 编码中文需要支持中文的字符集
+    string = "hello world"
+    print("字符编码：ASCII", string.encode("ascii"))  # ascii只能对英文进行编码
+    string = "中文"
+    print("字符编码：UTF-8", string.encode("utf-8"))  # 编码中文需要支持中文的字符集
     
     # 10. 对字符串进行解码
-    str = b'hello world'
-    print("字符解码：ASCII", str.decode("ascii"))
-    str = b'\xe4\xb8\xad\xe6\x96\x87'
-    print("字符解码：UTF-8", str.decode("utf-8"))
+    string = b'hello world'
+    print("字符解码：ASCII", string.decode("ascii"))
+    string = b'\xe4\xb8\xad\xe6\x96\x87'
+    print("字符解码：UTF-8", string.decode("utf-8"))
     
     # 11. 计算字符串长度
-    str = "1234567"
-    print("字符串\"%s\"长度：%d" %(str, len(str)))
+    string = "1234567"
+    print("字符串\"%s\"长度：%d" %(string, len(string)))
     print("------------------------------\n\n")
     # ------------------------------
     
@@ -152,8 +152,78 @@ if __name__ == "__main__":
     # 元组查询
     print("元组内的第一个元素：", database[0])
     print("元组内的最后一个元素：", database[-1])
+    print("------------------------------\n\n")
+    # ------------------------------
     
+    # 条件语句
+    if True:
+        print("one")
+    elif True:
+        print("two")
+    elif True:
+        print("three")
+    else:
+        print("four")
+    print("------------------------------\n\n")
+    # ------------------------------
     
+    # 循环语句
+    # for
+    sum = 0
+    for i in range(101):
+        sum = sum + i
+    print("[for循环] 0..100的和：", sum)
     
+    # while
+    sum = 0
+    i = 0
+    while i <= 100:
+        sum = sum + i
+        i = i + 1
+    print("[while循环] 0..100的和：", sum)    
+    print("------------------------------\n\n")
+    # ------------------------------
+    
+    # 字典
+    dict = {1: "zdy", 2: "tsy", 3: "dmy", 4: "zzx"}
+    length = len(dict)
+    print("字典元素：", dict, "长度为：", length)
+    
+    # 1. 访问字典元素
+    print("第一个字典元素：", dict[1])
+    # 如果key不存在那么会报错，为了避免这种情况
+    if 2 in dict:
+        print("第二个字典元素：", dict[2])    
+    
+    # 2. 删除元素
+    if 3 in dict:
+        dict.pop(3)
+    print("删除第三个字典元素后：", dict)
+    
+    # 3. dict的key必须是不可变对象，否则Hash算法将失效
+    # 4. 重复添加相同key的值，前面的值会被后面的值替代
+    dict[1] = "new value"
+    print("重复添加第一个字典元素后：", dict)
+    print("------------------------------\n\n")
+    # ------------------------------
+    
+    # 不可重复集合set
+    s = set([1,1,1,1,2,3,4,5,6,6,6,6,6])        # 重复添加无效
+    print("不可重复集合set：", str(s))           # 无法直接访问
+    
+    # 1. 添加元素
+    s.add(7)
+    s.add(4)    # 重复添加元素无效
+    print("添加一个集合元素后：", str(s))
+    
+    # 2. 删除元素
+    s.remove(5)
+    print("删除一个元素后：", str(s))
+    
+    # 3. 运算
+    s1 = set([1,2,3])
+    s2 = set([2,3,4])
+    print("并集：", s1 | s2)
+    print("交集：", s1 & s2)
     
     
