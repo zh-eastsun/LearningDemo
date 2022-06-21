@@ -1,11 +1,13 @@
+
 # -*- coding: utf-8 -*-
 
 # 第一个注释
 # 导入模块
 from base64 import encode
 import keyword
-from operator import truediv
-from re import X
+from funcation import my_do_nothing
+from funcation import my_funcation
+
 # 输出模块的内容
 keyword.kwlist # 所有关键字信息
 
@@ -225,5 +227,10 @@ if __name__ == "__main__":
     s2 = set([2,3,4])
     print("并集：", s1 | s2)
     print("交集：", s1 & s2)
+    print("------------------------------\n\n")
+    # ------------------------------
     
+    # 函数
+    my_funcation("hello there is main.")
+    my_do_nothing()
     
