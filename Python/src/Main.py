@@ -112,7 +112,7 @@ if __name__ == "__main__":
     print("------------------------------\n\n")
     # ------------------------------
     
-    # 可变列表List
+    # 有序可变列表List
     language = ["java", "kotlin", "python"]             # 定义
     length = len(language)                              # 计算长度
     print("列表元素：", language, "；长度：", length)
@@ -124,4 +124,36 @@ if __name__ == "__main__":
     # 2. 添加元素
     language.append("javascript")
     print("添加后的列表元素：", language)
+    
+    # 3. 在指定位置插入元素
+    language.insert(1, "指定位置添加的元素")
+    print("在指定位置添加元素后的列表：", language)
+    
+    # 4. 删除末尾的元素
+    language.pop()
+    print("删除末尾后的列表元素：", language)
+    
+    # 5. 删除指定位置元素
+    language.pop(1)
+    print("删除第二个元素后的列表元素：", language)
+    
+    # 6. 二维数组
+    language = [["python", "java", "go"], ["kotlin", "groovy", "swift"], "java"]
+    len(language) # 长度为3
+    len(language[0]) # 长度为3
+    print("------------------------------\n\n")
+    # ------------------------------
+    
+    # 有序不可变列表tuple，不可变的元组相对于可变长的列表来说更加安全
+    database = ("mysql", "nosql", "mongodb", "sqlite")      # 定义好之后元组内元素不可变
+    length = len(database)                                  # 计算长度
+    print("元组元素：", database, "长度：", length)
+    # 由于元组不可变的属性，因此并无增删改的操作
+    # 元组查询
+    print("元组内的第一个元素：", database[0])
+    print("元组内的最后一个元素：", database[-1])
+    
+    
+    
+    
     
