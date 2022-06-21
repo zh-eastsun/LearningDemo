@@ -1,7 +1,10 @@
+# -*- coding: utf-8 -*-
+
 # 第一个注释
 # 导入模块
 import keyword
 from operator import truediv
+from re import X
 # 输出模块的内容
 keyword.kwlist # 所有关键字信息
 
@@ -33,9 +36,12 @@ if __name__ == "__main__":
         print("not done...")
         # 缩进一致会导致错误
       # print("error...")
-    
+    #----------------
     
     # 数字类型
     # 1. 整形，Python3中只有int型，没有Long
-    num = 1
-    print("num的类型是")
+    num = 1     # 普通10进制整形
+    print("num的类型是", type(num))
+    
+    num = 10_000_000      # 可以使用_对整形进行分割，这里只是为了提升可读性
+    print("num的数值是", num)
