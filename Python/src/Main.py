@@ -5,8 +5,10 @@
 # 导入模块
 from base64 import encode
 import keyword
-from funcation import my_do_nothing
+from funcation import my_do_nothing, my_multiparam
 from funcation import my_funcation
+from funcation import my_type_check
+from funcation import my_introduce
 
 # 输出模块的内容
 keyword.kwlist # 所有关键字信息
@@ -233,4 +235,13 @@ if __name__ == "__main__":
     # 函数
     my_funcation("hello there is main.")
     my_do_nothing()
+    my_type_check("hello")
+    # 默认参数
+    my_introduce()
+    # 传入参数
+    my_introduce("zdy", "25", "ShannXi")
+    # 传入可变长参数
+    my_multiparam("第一个参数", "第二个参数", "第三个参数")
+    params = ["第四个参数", "第五个参数"]
+    my_multiparam(*params)
     
